@@ -1,0 +1,12 @@
+#main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#beer-img {
+    margin-top: 7%;
+    width: 400px;
+    height: 400px;
+}
