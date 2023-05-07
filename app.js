@@ -26,4 +26,15 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
+app.get("/beers", (req, res)=>{
+  punkAPI
+  .getBeers()
+  .then(beersFromApi => {
+    console.log(beersFromApi)
+    const allBeers = beersFromApi;
+    res.render('beers', {allBeers})
+  })
+  .catch(error => console.log(error));
+})
+
 app.listen(3000, () => console.log('🏃‍ on port 3000'));

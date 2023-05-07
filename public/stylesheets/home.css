@@ -15,7 +15,7 @@
     align-items: center;
 }
 
-button {
+.button {
     margin: 10px;
     background-color: #2081c3;
     color: #f7f9f9;
@@ -23,8 +23,10 @@ button {
     border: none;
     border-radius: 7px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-decoration: none;
+    font-size: small;
 }
 
-#btns-cnt > button:nth-child(2) {
+#btns-cnt > a:nth-child(2) {
     margin-bottom: 50px;
 }
