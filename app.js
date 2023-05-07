@@ -3,6 +3,7 @@ const express = require('express');
 const hbs = require('hbs');
 const path = require('path');
 const PunkAPIWrapper = require('punkapi-javascript-wrapper');
+const { runInNewContext } = require('vm');
 
 const app = express();
 const punkAPI = new PunkAPIWrapper();
@@ -30,9 +31,28 @@ app.get("/beers", (req, res)=>{
   punkAPI
   .getBeers()
   .then(beersFromApi => {
-    console.log(beersFromApi)
     const allBeers = beersFromApi;
     res.render('beers', {allBeers})
+  })
+  .catch(error => console.log(error));
+})
+
+app.get("/random-beer", (req, res)=>{
+  punkAPI
+  .getRandom()
+  .then(randomBeer => {
+    console.log(randomBeer)
+
+    let beer = randomBeer[0];
+
+    let img = beer.image_url;
+    let name = beer.name;
+    let desc = beer.description;
+    let tagline = beer.tagline;
+    let foodPairing = beer.food_pairing;
+    let brewerTips = beer.brewers_tips;
+
+    res.render('random-beer', {img, name, desc, tagline, foodPairing, brewerTips})
   })
   .catch(error => console.log(error));
 })
