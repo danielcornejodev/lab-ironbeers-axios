@@ -17,7 +17,7 @@ body, html {
 
 nav {
     background-color: #2081c3;
-    height: 5vh;
+    height: 7vh;
     display: flex;
     padding-left: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -34,7 +34,7 @@ nav > a {
 
 footer {
     background-color: #0a2c42;
-    height: 5vh;
+    height: 7vh;
     color: #f7f9f9;
     display: flex;
     align-items: center;
