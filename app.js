@@ -42,10 +42,8 @@ app.get("/random-beer", (req, res)=>{
   .then(randomBeer => {
     console.log(randomBeer)
 
-    let beer = randomBeer[0];
-
     // res.render('random-beer', {img, name, desc, tagline, foodPairing, brewerTips})
-    res.render('random-beer', {beer})
+    res.render('random-beer', {randomBeer})
   })
   .catch(error => console.log(error));
 })
