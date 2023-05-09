@@ -7,15 +7,15 @@
     <title>Random Beer</title>
 </head>
 <body>
-    {{#each randomBeer}}
-    <div>
-        {{> beerPartial this}}
-        <h3>Food Pairing</h3>
-        <p>{{this.food_pairing}}</p>
-        <h3>Brewer Tips</h3>
-        <p>{{this.brewers_tips}}</p>
-    </div>
-    {{/each}}
+        {{#each randomBeer}}
+        <div>
+            {{> beerPartial this}}
+            <h3>Food Pairing</h3>
+            <p>{{this.food_pairing}}</p>
+            <h3>Brewer Tips</h3>
+            <p>{{this.brewers_tips}}</p>
+        </div>
+        {{/each}}
 </body>     
 
     

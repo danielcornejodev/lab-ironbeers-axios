@@ -8,10 +8,12 @@
     <title>Beers</title>
 </head>
 <body>
-    {{#each allBeers}}
-    <div>
-        {{> beerPartial this}}
+    <div id="main">
+        {{#each allBeers}}
+        <div id="beer-div">
+            {{> beerPartial this}}
+        </div>
+        {{/each}}
     </div>
-    {{/each}}
 </body>
 </html>

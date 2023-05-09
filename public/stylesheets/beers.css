@@ -1,5 +1,11 @@
-div {
+#main {
     display: flex;
+    flex-wrap: wrap;
+    padding: 0 5%;
+}
+
+#beer-div {
+    width: 30%;
 }
 
 #partial-cnt {
