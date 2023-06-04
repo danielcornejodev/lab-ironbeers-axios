@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/beers.css">
     <title>Random Beer</title>
 </head>
 <body>
-        <div>
-            {{> beerPartial oneRandomBeer}}
+        <div id="random-beer-div">
+            {{> beerpartial oneRandomBeer}}
             <h3>Food Pairing</h3>
-            <p>{{this.food_pairing}}</p>
+            <p>{{oneRandomBeer.food_pairing}}</p>
             <h3>Brewer Tips</h3>
-            <p>{{this.brewers_tips}}</p>
+            <p>{{oneRandomBeer.brewers_tips}}</p>
         </div>
 </body>     
 
